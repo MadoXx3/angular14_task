@@ -1,0 +1,95 @@
+@import "/src/layout/scss/_vars.scss", "src/layout/scss/_spacers.scss";
+
+@include spacers();
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: $primary-color;
+}
+
+.center-x {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-right {
+  text-align: right;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  padding: 0;
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+  & > [class*="col-"]:first-child {
+    margin-left: 0;
+  }
+  & > [class*="col-"]:last-child {
+    margin-right: 0;
+  }
+  & > [class*="col-"] {
+    margin: 0 $gutter/2;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+@for $i from 1 through $col-count {
+  .col-#{$i} {
+    width: (100% - ($col-count / $i - 1) * $gutter) / $col-count * $i;
+  }
+}
+
+@for $i from 1 through $col-count - 1 {
+  .row [class*="col-"]:first-child.offset-#{$i} {
+    margin-left: ((100% - ($col-count / $i - 1) * $gutter) / $col-count * $i) +
+      $gutter;
+  }
+  .row [class*="col-"].offset-#{$i} {
+    margin-left: ((100% - ($col-count / $i - 1) * $gutter) / $col-count * $i) +
+      $gutter;
+  }
+}
+
+@for $i from 1 through 100 {
+  .w-#{$i} {
+    width: #{$i}#{"%"} !important;
+    // * {
+    //   @extend .test;
+    // }
+  }
+  .h-#{$i} {
+    height: #{$i}#{"%"} !important;
+  }
+}
+
+.test {
+  border: 1px solid darken($color: $additional-color-2, $amount: 50%);
+}

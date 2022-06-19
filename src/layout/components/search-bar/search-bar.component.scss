@@ -1,0 +1,39 @@
+.search-box {
+  display: flex;
+  border: 0.2em solid #d1d1d1;
+  border-radius: 0.8em;
+  padding: 0.3em;
+
+  .search-form-input {
+    appearance: none;
+    position: relative;
+    width: 75%;
+    height: 2em;
+    padding: 5px 40px 5px 5px;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    background-image: url("../../../assets/img/search-icon.svg");
+    background-position: 97% center;
+    background-size: 0.9em;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: #3d3935;
+    font-size: 0.9rem;
+    outline: none;
+  }
+  .dropdown-parent {
+    position: relative;
+    width: 25%;
+    height: 1em;
+    &:before {
+      position: absolute;
+      top: 0.05em;
+      right: 0;
+      z-index: 999;
+      width: 1px;
+      height: 2.5em;
+      background-color: #ccc;
+      content: "";
+    }
+  }
+}

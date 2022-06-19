@@ -1,0 +1,38 @@
+.navbar {
+  font-size: 12px;
+  hr {
+    height: 1px;
+    background: #151515;
+  }
+  a {
+    position: relative;
+    display: block;
+    height: 2.5em;
+    width: 2.5em;
+    text-decoration: none;
+    &.user-profile {
+      background: url("../../../assets/img/user-icon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &.notif {
+      background: url("../../../assets/img/ic-ecommerce-basket.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      .num {
+        position: absolute;
+        padding: 0 0.2em;
+        min-width: 1.75em;
+        font-size: 1em;
+        right: 1em;
+        background: #e5704b;
+        border-radius: 100em;
+        top: 1em;
+        line-height: 1.75em;
+        color: #fff;
+        height: 1.75em;
+        text-align: center;
+      }
+    }
+  }
+}

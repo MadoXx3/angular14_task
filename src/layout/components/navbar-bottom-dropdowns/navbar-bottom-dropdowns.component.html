@@ -1,0 +1,9 @@
+<div class="row dropdowns-queue">
+  <div
+    class="d-inline-block dropdown-queue-item"
+    *ngFor="let category of categories"
+  >
+    <app-dropdown [currentCategory]="category" [categories]="categories">
+    </app-dropdown>
+  </div>
+</div>

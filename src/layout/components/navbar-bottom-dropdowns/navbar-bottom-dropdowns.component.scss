@@ -1,0 +1,16 @@
+.dropdowns-queue {
+  background-color: #f9f9f9;
+  .dropdown-queue-item {
+    padding-right: 4em;
+    .dropdown {
+      .selected-item {
+        font-weight: 500 !important;
+        font-size: 0.8rem !important;
+        padding: 0 6px;
+      }
+      .dropdown-button:after {
+        right: auto !important;
+      }
+    }
+  }
+}

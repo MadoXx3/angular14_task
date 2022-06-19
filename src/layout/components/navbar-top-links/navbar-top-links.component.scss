@@ -1,0 +1,12 @@
+.top-nav-links {
+  a {
+    color: #6a983c;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &.dark {
+      color: #151515;
+    }
+  }
+}

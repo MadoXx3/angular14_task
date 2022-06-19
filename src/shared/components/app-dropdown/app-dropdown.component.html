@@ -1,0 +1,18 @@
+<details #dropdown class="dropdown">
+  <summary class="dropdown-button">
+    <span id="selected-item" class="selected-item">{{ currentCategory }}</span>
+  </summary>
+  <div class="dropdown-menu">
+    <div class="dropdown-menu-list">
+      <label class="dropdown-menu-item" *ngFor="let category of categories">
+        <input
+          type="radio"
+          name="item"
+          (click)="updateCurrent(category)"
+          [value]="category"
+        />
+        <span>{{ category }}</span>
+      </label>
+    </div>
+  </div>
+</details>
